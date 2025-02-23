@@ -10,16 +10,23 @@
 
 / {
     behaviors {
-        caps_lock: caps_lock {
+        Hold: Hold {
             compatible = "zmk,behavior-hold-tap";
-            label = "CAPS_LOCK";
-            bindings = <&caps_word>, <&kp>;
+            label = "HOLD";
+            bindings = <&none>, <&none>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <500>;
-            quick-tap-ms = <(-1)>;
-            require-prior-idle-ms = <(-1)>;
-            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            flavor = "tap-unless-interrupted";
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        Poucesgauches {
+            bindings = <&mo 1>;
+            key-positions = <52 51>;
         };
     };
 
@@ -36,11 +43,11 @@
 
             display-name = "Base";
             bindings = <
-&kp ESC           &kp N1  &kp N2  &kp N3        &kp N4    &kp N5                         &kp N6  &kp N7    &kp N8        &kp N9   &kp N0    &kp EQUAL
-&kp TAB           &kp Q   &kp W   &kp E         &kp R     &kp T                          &kp Y   &kp U     &kp I         &kp O    &kp P     &kp MINUS
-&kp LEFT_CONTROL  &kp A   &kp S   &kp D         &kp F     &kp G                          &kp H   &kp J     &kp K         &kp L    &kp SEMI  &kp SQT
-&kp LEFT_SHIFT    &kp Z   &kp X   &kp C         &kp V     &kp B   &kp LBKT     &kp RBKT  &kp N   &kp M     &kp COMMA     &kp DOT  &kp FSLH  &kp RSHFT
-                                  &kp LEFT_ALT  &kp LGUI  &mo 1   &kp SPACE    &kp RET   &mo 2   &kp BSPC  &kp LEFT_ALT
+&kp ESC           &kp N1  &kp N2  &kp N3        &kp N4    &kp N5                                 &kp N6  &kp N7    &kp N8        &kp N9   &kp N0    &kp EQUAL
+&kp TAB           &kp Q   &kp W   &kp E         &kp R     &kp T                                  &kp Y   &kp U     &kp I         &kp O    &kp P     &kp MINUS
+&kp LEFT_CONTROL  &kp A   &kp S   &kp D         &kp F     &kp G                                  &kp H   &kp J     &kp K         &kp L    &kp SEMI  &kp SQT
+&kp LEFT_SHIFT    &kp Z   &kp X   &kp C         &kp V     &kp B           &kp LBKT     &kp RBKT  &kp N   &kp M     &kp COMMA     &kp DOT  &kp FSLH  &kp RSHFT
+                                  &kp LEFT_ALT  &kp LGUI  &kp LEFT_SHIFT  &kp SPACE    &kp RET   &mo 2   &kp BSPC  &kp LEFT_ALT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
