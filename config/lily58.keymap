@@ -9,18 +9,6 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
-    behaviors {
-        Hold: Hold {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOLD";
-            bindings = <&none>, <&none>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "tap-unless-interrupted";
-        };
-    };
-
     combos {
         compatible = "zmk,combos";
 
