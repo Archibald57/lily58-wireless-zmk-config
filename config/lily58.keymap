@@ -77,9 +77,9 @@
         Jeux {
             bindings = <
 &kp ESC    &kp N1    &kp N2        &kp N3     &kp N4    &kp N5                            &trans  &trans  &trans  &trans  &trans  &trans
-&kp TAB    &kp A     &kp UP_ARROW  &kp D      &kp H     &kp K                             &trans  &trans  &trans  &trans  &trans  &trans
+&kp TAB    &kp A     &kp UP_ARROW  &kp D      &kp J     &kp K                             &trans  &trans  &trans  &trans  &trans  &trans
 &trans     &kp LEFT  &kp DOWN      &kp RIGHT  &kp G     &kp COMMA                         &trans  &trans  &trans  &trans  &trans  &trans
-&kp LCTRL  &kp T     &kp X         &kp C      &kp V     &kp B           &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp LCTRL  &kp T     &kp X         &kp W      &kp V     &kp B           &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
                                    &kp LALT   &kp LGUI  &kp LEFT_SHIFT  &trans    &trans  &trans  &trans  &trans
             >;
         };
